@@ -226,4 +226,16 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
+patches = {
+    "app_name": [
+        "custom_app.patches.indexing"
+    ]
+}
+fixtures = [
+    {
+        "dt": "Report",
+        "filters": [
+            ["module", "=", "custom_app"]
+        ]
+    }
+]
